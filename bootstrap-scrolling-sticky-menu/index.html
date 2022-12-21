@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>Analyzing Foreign Aid Distribution and Allocation Overtime</title>
+    <meta name="description" content="Simplified Bootstrap template with sticky menu">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sticky-menu.css" rel="stylesheet">
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Overview</a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#datasets">Datasets</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#q1">Question 1</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#q2">Question 2</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#future">Future Exploration</a>
+                    </li>
+                </ul>
+            </div>	<!-- .navbar-collapse -->
+        </div>		<!-- .container -->
+    </nav>
+    <!-- Overview Section -->
+    <section id="Overview" class="welcome-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Analyzing Foreign Aid Distribution and Allocation Overtime</h2>
+                    <p><em>This project explores 2 main research questions...</em></p>
+                    <p>1. Do the main source and recipient countries of health-related aid change overtime?</p>
+                    <p>2. How much variation occurs overtime in the amount of health-related aid that a country revcieves?</p>
+                    <img src="https://media.npr.org/assets/img/2017/05/17/aid-1_wide-6117513f8733eb57f11dda487d44f6d7349f3256-s1100-c50.jpg"
+                          width = "650" />
+                    <p> </p>
+
+    <!-- Dataset Section -->
+    <section id="datasets" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Datasets</h1>
+                    <p><strong>Dataset 1: Foreign Aid Source and Recipient Countries from 1990-2018 (GHDx)</strong></p>
+                    <p><em>Source: </em>https://ghdx.healthdata.org/record/ihme-data/development-assistance-health-database-1990-2018</p>
+                    <p>This dataset provides information on which countries provided health-related aid to other countries from 1990-2018. While the dataset included many variables, after cleaning the dataset, I focused on the source country, recipient country, and year of each aid transaction. Also, I manipulated the data so that each unique set of these 3 variable was only included once, with a count of how many times a like transaction had occured.</p>
+                    <p> </p>
+                    <p><strong>Dataset 2: Amount of Aid Recieved by Countries from 1960-2020 (WorldBank)</strong></p>
+                    <p><em>Source: </em>https://data.worldbank.org/indicator/DT.ODA.ALLD.CD</p>
+                    <p>This dataset shows the amount of aid that countries recieved from 1960-2020. After cleaning, the data showed the amount of aid recieved by a country for each year in the timeline, with some NaN values for years with no aid or with no data collected.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q1 Section -->
+    <section id="q1" class="whatwedo-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Question 1</h1>
+                    <img src="https://lh3.googleusercontent.com/Pww8E733-mDXy80Mis0QvSWbU-jrT2ozhaz3QFLwz01zNI-abkNcBCPa5fGXu53M0cpOvl05V8MtlD66WGw7zkmmNtoySGu6qOW1AiseTwuM5_oZNGxxk8iel9rO2GkHuXRCATtuWg=w2400"
+                          width = "1000"/>
+                    <img src="https://lh3.googleusercontent.com/Mp9I3_rm2B_Ult80HUYrEAlC-Tbvq5jip0cYtbAkTGEdHebgM_rCtxobufmBzkny_DKgtM3ej3MvJMVrtcCf3b_ETfUiwY9FoR58N06Ln__IArWSZ8YYMkKklOksb-KifNHEy3t0qA=w2400"
+                          width = "1000" />
+                    <img src="https://lh3.googleusercontent.com/1srToKkFG0ciFR2LahdS5bE50S8WyQfCJEpmg9Gfs3jschrUKqX4nVX7nSQvYPzusk_9kNwArEx2TH8TlAxzy3ox0pi0y2hf5fAfNUL2wRPNSHOTc4QCZ5OOlwhGKHOumCsi7XTEaQ=w2400"
+                          width = "1000" />
+                    <p>To begin analyzing which countries are giving/receiving health-related aid overtime, I created a series of network graphs that give a snapshot of these relationships at a specific time. The clustering of edges in these networks does generally show which countries gave aid to the most countries; however, I think that more experiementation could be done with the visual representation in order to make it more obvious which countries have the most well-established aid relationships as well as make it easier to compare the networks across years. Currently, I have limited the number of edges that are shown by setting a minimum number of times that two countries exchanged aid throughout the year. (Without this limit, the high number of edges makes the networks illegible.) However, because the amount of overall foreign aid changes from year to year, these varied limits can make the networks hard to compare. </p>
+                    <img src="https://lh3.googleusercontent.com/WkHP15WkUOZyW8ViBXxICn_fdQ8rVdcqiqlOL-x7JhsKG9CMlW6aq-xbDAOGpMqcWR_5cALSx3I-Nm77VNPQHrtn4YHDgl8yGo3ZyCI23_6Rsm1nHWz1rhoIQrwnYeaMvLzA7NuOjg=w2400"
+                          width = "1000" />
+                    <p> </p>
+                    <img src="https://lh3.googleusercontent.com/sYdUONn8R0eLn5kaPiUtmq21QLXCATyLvAcG221VaWS_hj6fe51iPYuOWCeZs8qjgAyd0Z8lqSN-xGOLOY1ejEA96MWnQQxayhWMu9Lep1qOHGxNvttyhnEFXl5CK4wAxVonh0-f2g=w2400"
+                          width = "1000" />
+                    <p> </p>
+                    <img src="https://lh3.googleusercontent.com/rQYDp6I4G74Dsp0AqyC2u8jU3oHPy_hw-4W4NBUnU0BkQOXpjQ1BukBvI1Zdh1ZT7LThK_8hXNbEKhJP3XOJSLA__7XTQIr2SgUiP_yEDp4VUs4zDY8NIn3BHXCpdG6wZWdEO4yinA=w2400"
+                          width = "1000" />
+                    <p>I also created a bar plot that showed the number of countries that a source gave aid to during a certain year. Again, I chose to create these plots for 1990, 2005, and 2017 in order to see any changes overtime. However, I again ran into the problem that I could not include all the sources for a given year as this produced a plot with too many bars to be meaningful. I chose to limit the number of bars by only included sources that gave recipients aid a minimum number of times throughout the year (which was the same method I used in the network visualizations). I will continue exploring different ways of limiting the data because having varied cutoffs makes it more difficult to compare across years.</p>
+                    <h5>Number of Times Countries Gave Aid</h5>
+                    <img src="https://lh3.googleusercontent.com/CvQjcXwgljB6d81WeiigGNxrQIQ90XukvviWm4J9eOD_8gnDfkJGrDLfN-PTG8DT5E2I-86WVawd6V_tSLSVeYeDr6ZxD98raKDINte_VxvpQrkObaTWgS7X9cpC4n2sL8P2cJBQKQ=w2400"
+                          width = "1000" />
+                    <p> </p>
+                    <h5>Number of Times Countries Recieved Aid</h5>
+                    <img src="https://lh3.googleusercontent.com/TuWJSOjyOqO4O5HEfzKQ_Z1hOCE5EzlQBVbGT1yCoXQrfFo92wGvG7Z7O6Rk9UOzBWXSCql0TACP51rJjHJZMmTqOIXE8scd_WACjIi5pGp-0H5yS9T40FGs7mAcLbHMZnlIpsdU1g=w2400"
+                          width = "1000" />
+                    <p>These maps illustrate the number of times that countries gave/recieved from 1990 to 2020. The green map illustrates source countries, and the pink map illustrates recipient countries.</p>
+                    <h3><strong>Conclusion:</h3>
+                    <p>In general, the countries that serve as sources for health-related aid contain a few main countries that remain stable each year (such as the United States, the United Kingdom, and Canada). However, every year, there is some variation in which smaller countries are the highest contributors. With respect to recipient countries, the story is similar with mulitple African and Asian countries routinely recieving large amounts of aid, while other countries will experience spikes in aid if there are unexpected population health problems.</strong></p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Q2 Section -->
+    <section id="q2" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Question 2</h1>
+                    <img src="https://lh3.googleusercontent.com/S6HTv1HGZ0cYYex8QLD197v52oYgQQ0-JZrjY1fzn-TVcGZwuP2HcVoE38NBuPFLzmHda9kE6y12odxQxyJ0iGS9Ei8SiN6CN2_ZCUhjr9A1AIIGLxWFM9ItANztWGA0gr1ctIXzWA=w2400"
+                          width = "1000" />
+                    <p> </p>
+                    <img src="https://lh3.googleusercontent.com/8mQfY-e8PtpS3UWn_Yv4hJBs4MTxu7AwyBAXcpKyapFJX0HZiI4EZHONUSsJTr9hcfRDm1FMm9d2bjNEAmMbU5r7Ks0E-Ob1Gn5OTRYxWNzuOq-rQNO38BJ2SMKxWUEwmdzPELAn4w=w2400"
+                          width = "1000" />
+                    <p> </p>
+                    <p>For this dataset, in order to start identifying trends, I decided to compare the aid income of 3 developing countries in Africa. It is clear that there is a definite variation in aid amounts between countries and overtime. Seeing the large spike in Nigeria’s aid value, I decided to do some research as to why that might be. In that period of time, Nigeria faced its first outbreak of a strain of bird flu as well as heightened effects of the Lassa fever. Both of these diseases would have required increased medical care, and as a result, aid needs would have increased. <em>(Disclosure: The downward trend seen in overall aid in 2020 is due to a lack of data. In reality, with the demands of COVID-19, the amount of aid was likely significantly larger.)</em></p>
+                    <h3><strong>Conclusion:</h3>
+                    <p>Conclusion: Overall, it appears that the amount of health-related aid for an individual country as well as cummulative globally changes greatly from year to year. These changes appear to be due to a combination of factors that influence individual countries and compound to effect the overall total.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Section -->
+    <section id="future" class="whatwedo-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Future Exploration</h1>
+                    <p>As I described above, the conditions and sheer amount of aid varies widely over the years. Visually, this can make it very difficult to compare the aid distribution across years. I am still
+experimenting with different scales in order to see what allows for the best comparisions.</p>
+                    <p>Also, I want to do a lot more work investigating the trends seen in these visualizations. While it is interesting to see the peaks and valleys in aid amounts, understanding the factors that drive
+these changes will make the analysis more applicable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/sticky-menu.js"></script>
+
+</body>
+
+</html>
